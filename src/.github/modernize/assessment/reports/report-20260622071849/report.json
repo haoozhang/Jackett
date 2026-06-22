@@ -1,0 +1,1714 @@
+{
+  "version": "1.0.0",
+  "producer": ".NET AppCAT CLI",
+  "metadata": {
+    "analysisStartTime": "2026-06-22T07:18:49.9758394Z",
+    "analysisEndTime": "2026-06-22T07:18:55.7944981Z",
+    "privacyMode": "Restricted",
+    "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2271074",
+    "targetIds": [
+      "AppService.Windows",
+      "AppService.Linux",
+      "AKS.Linux",
+      "AKS.Windows",
+      "ACA",
+      "AppServiceContainer.Linux",
+      "AppServiceContainer.Windows",
+      "AppServiceManagedInstance.Windows"
+    ],
+    "targetDisplayNames": [
+      "Azure App Service",
+      "Azure Kubernetes Service",
+      "Azure Container Apps",
+      "Azure App Service Container",
+      "Azure App Service Managed Instance"
+    ],
+    "os": [
+      "windows",
+      "linux"
+    ]
+  },
+  "summary": {
+    "totalProjects": 8,
+    "totalIssues": 7,
+    "totalIncidents": 29,
+    "totalEffort": 117,
+    "charts": {
+      "severity": {
+        "mandatory": 6,
+        "optional": 19,
+        "potential": 4,
+        "information": 0
+      },
+      "category": {
+        "Scale": 4,
+        "Local": 23,
+        "COM": 2
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "DateTimeRoutines\\DateTimeRoutines.csproj",
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "DateTimeRoutines",
+        "frameworks": [
+          "netstandard2.0",
+          "net9.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ]
+      },
+      "incidents": []
+    },
+    {
+      "path": "Jackett.Common\\Jackett.Common.csproj",
+      "issues": 1,
+      "storyPoints": 3,
+      "properties": {
+        "appName": "Jackett.Common",
+        "frameworks": [
+          "netstandard2.0",
+          "net9.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ]
+      },
+      "incidents": [
+        {
+          "ruleId": "Scale.0001",
+          "incidentId": "baac51a6-e45f-42ad-92f1-f733b6e4526f",
+          "location": "Jackett.Common\\Jackett.Common.csproj",
+          "locationKind": "File",
+          "targets": {
+            "AppService.Windows": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AppService.Linux": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AKS.Linux": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AKS.Windows": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "ACA": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "optional",
+              "effort": 3
+            }
+          },
+          "labels": []
+        }
+      ]
+    },
+    {
+      "path": "Jackett.IntegrationTests\\Jackett.IntegrationTests.csproj",
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "Jackett.IntegrationTests",
+        "frameworks": [
+          "net9.0",
+          "net471"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ]
+      },
+      "incidents": []
+    },
+    {
+      "path": "Jackett.Server\\Jackett.Server.csproj",
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "Jackett.Server",
+        "frameworks": [
+          "net9.0",
+          "net471"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ]
+      },
+      "incidents": []
+    },
+    {
+      "path": "Jackett.Service\\Jackett.Service.csproj",
+      "issues": 3,
+      "storyPoints": 30,
+      "properties": {
+        "appName": "Jackett.Service",
+        "frameworks": [
+          "net9.0-windows"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ]
+      },
+      "incidents": [
+        {
+          "ruleId": "Scale.0001",
+          "incidentId": "5678cae4-2b79-4290-8c09-68eb0b36fc70",
+          "location": "Jackett.Service\\Jackett.Service.csproj",
+          "locationKind": "File",
+          "targets": {
+            "AppService.Windows": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AppService.Linux": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AKS.Linux": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AKS.Windows": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "ACA": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "optional",
+              "effort": 3
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0010",
+          "incidentId": "70143e24-d005-48dc-8137-262fd78b5aa8",
+          "location": "Jackett.Service\\Program.cs",
+          "locationKind": "File",
+          "line": 16,
+          "column": 12,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "mandatory",
+              "effort": 3
+            },
+            "AppService.Linux": {
+              "severity": "mandatory",
+              "effort": 3
+            },
+            "AKS.Linux": {
+              "severity": "mandatory",
+              "effort": 3
+            },
+            "AKS.Windows": {
+              "severity": "information",
+              "effort": 3
+            },
+            "ACA": {
+              "severity": "mandatory",
+              "effort": 3
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "mandatory",
+              "effort": 3
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "information",
+              "effort": 3
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "information",
+              "effort": 3
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0010",
+          "incidentId": "4f323a63-10e2-408d-913b-f114dbfc7827",
+          "location": "Jackett.Service\\Program.cs",
+          "locationKind": "File",
+          "line": 11,
+          "column": 12,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "mandatory",
+              "effort": 3
+            },
+            "AppService.Linux": {
+              "severity": "mandatory",
+              "effort": 3
+            },
+            "AKS.Linux": {
+              "severity": "mandatory",
+              "effort": 3
+            },
+            "AKS.Windows": {
+              "severity": "information",
+              "effort": 3
+            },
+            "ACA": {
+              "severity": "mandatory",
+              "effort": 3
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "mandatory",
+              "effort": 3
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "information",
+              "effort": 3
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "information",
+              "effort": 3
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0010",
+          "incidentId": "9d377992-5f2c-4685-ba6f-b64ada51bbee",
+          "location": "Jackett.Service\\Program.cs",
+          "locationKind": "File",
+          "line": 12,
+          "column": 32,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "mandatory",
+              "effort": 3
+            },
+            "AppService.Linux": {
+              "severity": "mandatory",
+              "effort": 3
+            },
+            "AKS.Linux": {
+              "severity": "mandatory",
+              "effort": 3
+            },
+            "AKS.Windows": {
+              "severity": "information",
+              "effort": 3
+            },
+            "ACA": {
+              "severity": "mandatory",
+              "effort": 3
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "mandatory",
+              "effort": 3
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "information",
+              "effort": 3
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "information",
+              "effort": 3
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0010",
+          "incidentId": "d079ae9e-5e3d-4e80-b426-bdbdf8e99677",
+          "location": "Jackett.Service\\Service.cs",
+          "locationKind": "File",
+          "line": 12,
+          "column": 35,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "mandatory",
+              "effort": 3
+            },
+            "AppService.Linux": {
+              "severity": "mandatory",
+              "effort": 3
+            },
+            "AKS.Linux": {
+              "severity": "mandatory",
+              "effort": 3
+            },
+            "AKS.Windows": {
+              "severity": "information",
+              "effort": 3
+            },
+            "ACA": {
+              "severity": "mandatory",
+              "effort": 3
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "mandatory",
+              "effort": 3
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "information",
+              "effort": 3
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "information",
+              "effort": 3
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0012",
+          "incidentId": "829f98f0-d7cb-4274-9c25-9cca573039a0",
+          "location": "Jackett.Service\\Service.cs",
+          "locationKind": "File",
+          "line": 63,
+          "column": 29,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppService.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "ACA": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "optional",
+              "effort": 5
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0012",
+          "incidentId": "0adf94ce-a73f-43e5-9128-48e9c92ce3e1",
+          "location": "Jackett.Service\\Service.cs",
+          "locationKind": "File",
+          "line": 15,
+          "column": 16,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppService.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "ACA": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "optional",
+              "effort": 5
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0012",
+          "incidentId": "36159ff3-91a1-450f-855a-4045026faca9",
+          "location": "Jackett.Service\\Service.cs",
+          "locationKind": "File",
+          "line": 54,
+          "column": 32,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppService.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "ACA": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "optional",
+              "effort": 5
+            }
+          },
+          "labels": []
+        }
+      ]
+    },
+    {
+      "path": "Jackett.Test\\Jackett.Test.csproj",
+      "issues": 1,
+      "storyPoints": 3,
+      "properties": {
+        "appName": "Jackett.Test",
+        "frameworks": [
+          "net9.0",
+          "net471"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ]
+      },
+      "incidents": [
+        {
+          "ruleId": "Scale.0001",
+          "incidentId": "097c9866-b6a3-443a-851c-aa61c8af9415",
+          "location": "Jackett.Test\\Jackett.Test.csproj",
+          "locationKind": "File",
+          "targets": {
+            "AppService.Windows": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AppService.Linux": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AKS.Linux": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AKS.Windows": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "ACA": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "optional",
+              "effort": 3
+            }
+          },
+          "labels": []
+        }
+      ]
+    },
+    {
+      "path": "Jackett.Tray\\Jackett.Tray.csproj",
+      "issues": 6,
+      "storyPoints": 81,
+      "properties": {
+        "appName": "Jackett.Tray",
+        "frameworks": [
+          "net9.0-windows"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ]
+      },
+      "incidents": [
+        {
+          "ruleId": "Scale.0001",
+          "incidentId": "04c99be2-6a3f-4baf-806a-ef8b59af1436",
+          "location": "Jackett.Tray\\Jackett.Tray.csproj",
+          "locationKind": "File",
+          "targets": {
+            "AppService.Windows": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AppService.Linux": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AKS.Linux": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AKS.Windows": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "ACA": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "optional",
+              "effort": 3
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "optional",
+              "effort": 3
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "COM.0001",
+          "incidentId": "8f1209d4-e8cb-4dae-90f8-1c43401422e4",
+          "location": "Jackett.Tray\\Main.cs",
+          "locationKind": "File",
+          "line": 293,
+          "column": 9,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "mandatory",
+              "effort": 5
+            },
+            "AppService.Linux": {
+              "severity": "mandatory",
+              "effort": 5
+            },
+            "AKS.Linux": {
+              "severity": "mandatory",
+              "effort": 5
+            },
+            "AKS.Windows": {
+              "severity": "potential",
+              "effort": 5
+            },
+            "ACA": {
+              "severity": "mandatory",
+              "effort": 5
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "mandatory",
+              "effort": 5
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "potential",
+              "effort": 5
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "information",
+              "effort": 5
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "COM.0001",
+          "incidentId": "923d839e-1e79-4794-b2c3-d26254af2bec",
+          "location": "Jackett.Tray\\Main.cs",
+          "locationKind": "File",
+          "line": 299,
+          "column": 9,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "mandatory",
+              "effort": 5
+            },
+            "AppService.Linux": {
+              "severity": "mandatory",
+              "effort": 5
+            },
+            "AKS.Linux": {
+              "severity": "mandatory",
+              "effort": 5
+            },
+            "AKS.Windows": {
+              "severity": "potential",
+              "effort": 5
+            },
+            "ACA": {
+              "severity": "mandatory",
+              "effort": 5
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "mandatory",
+              "effort": 5
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "potential",
+              "effort": 5
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "information",
+              "effort": 5
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0003",
+          "incidentId": "74bdf9e5-36a9-4267-8fa4-1a5b4e5aeff8",
+          "location": "Jackett.Tray\\Main.cs",
+          "locationKind": "File",
+          "line": 136,
+          "column": 19,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "potential",
+              "effort": 3
+            },
+            "AppService.Linux": {
+              "severity": "potential",
+              "effort": 3
+            },
+            "AKS.Linux": {
+              "severity": "potential",
+              "effort": 3
+            },
+            "AKS.Windows": {
+              "severity": "potential",
+              "effort": 3
+            },
+            "ACA": {
+              "severity": "potential",
+              "effort": 3
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "potential",
+              "effort": 3
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "potential",
+              "effort": 3
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "potential",
+              "effort": 3
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0003",
+          "incidentId": "e34232d1-fd4e-4da4-90fb-f5ada51f4b0c",
+          "location": "Jackett.Tray\\Main.cs",
+          "locationKind": "File",
+          "line": 145,
+          "column": 20,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "potential",
+              "effort": 3
+            },
+            "AppService.Linux": {
+              "severity": "potential",
+              "effort": 3
+            },
+            "AKS.Linux": {
+              "severity": "potential",
+              "effort": 3
+            },
+            "AKS.Windows": {
+              "severity": "potential",
+              "effort": 3
+            },
+            "ACA": {
+              "severity": "potential",
+              "effort": 3
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "potential",
+              "effort": 3
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "potential",
+              "effort": 3
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "potential",
+              "effort": 3
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0006",
+          "incidentId": "0d81aefc-2e08-4c74-9604-3e78ac7fbc79",
+          "location": "Jackett.Tray\\Main.cs",
+          "locationKind": "File",
+          "line": 121,
+          "column": 27,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "potential",
+              "effort": 1
+            },
+            "AppService.Linux": {
+              "severity": "potential",
+              "effort": 1
+            },
+            "AKS.Linux": {
+              "severity": "potential",
+              "effort": 1
+            },
+            "AKS.Windows": {
+              "severity": "potential",
+              "effort": 1
+            },
+            "ACA": {
+              "severity": "potential",
+              "effort": 1
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "potential",
+              "effort": 1
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "potential",
+              "effort": 1
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "potential",
+              "effort": 1
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0007",
+          "incidentId": "00b39e9c-0298-42f7-ab90-54b8b2c35f9e",
+          "location": "Jackett.Tray\\Main.cs",
+          "locationKind": "File",
+          "line": 150,
+          "column": 51,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "potential",
+              "effort": 1
+            },
+            "AppService.Linux": {
+              "severity": "potential",
+              "effort": 1
+            },
+            "AKS.Linux": {
+              "severity": "potential",
+              "effort": 1
+            },
+            "AKS.Windows": {
+              "severity": "potential",
+              "effort": 1
+            },
+            "ACA": {
+              "severity": "potential",
+              "effort": 1
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "potential",
+              "effort": 1
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "potential",
+              "effort": 1
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "information",
+              "effort": 1
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0012",
+          "incidentId": "3027d58e-325f-49db-8380-02cd0cce5d9f",
+          "location": "Jackett.Tray\\Main.cs",
+          "locationKind": "File",
+          "line": 275,
+          "column": 29,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppService.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "ACA": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "optional",
+              "effort": 5
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0012",
+          "incidentId": "b897a72f-6d3e-40c3-87cb-2ce35a2785c9",
+          "location": "Jackett.Tray\\Main.cs",
+          "locationKind": "File",
+          "line": 26,
+          "column": 16,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppService.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "ACA": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "optional",
+              "effort": 5
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0012",
+          "incidentId": "58f599c7-0921-4227-b21a-b1f14320e68f",
+          "location": "Jackett.Tray\\Main.cs",
+          "locationKind": "File",
+          "line": 125,
+          "column": 12,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppService.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "ACA": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "optional",
+              "effort": 5
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0012",
+          "incidentId": "f6d282fb-ace8-47c9-8cad-dbcf1ee1385f",
+          "location": "Jackett.Tray\\Main.cs",
+          "locationKind": "File",
+          "line": 111,
+          "column": 16,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppService.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "ACA": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "optional",
+              "effort": 5
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0012",
+          "incidentId": "73a600ac-1bdd-48f6-a437-bbdeaef936e8",
+          "location": "Jackett.Tray\\Main.cs",
+          "locationKind": "File",
+          "line": 156,
+          "column": 30,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppService.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "ACA": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "optional",
+              "effort": 5
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0012",
+          "incidentId": "dbe55828-9257-4602-b2aa-ca3def97c234",
+          "location": "Jackett.Tray\\Main.cs",
+          "locationKind": "File",
+          "line": 157,
+          "column": 64,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppService.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "ACA": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "optional",
+              "effort": 5
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0012",
+          "incidentId": "64acfbfb-6781-4525-aada-bf3591e8dd43",
+          "location": "Jackett.Tray\\Main.cs",
+          "locationKind": "File",
+          "line": 119,
+          "column": 26,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppService.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "ACA": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "optional",
+              "effort": 5
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0012",
+          "incidentId": "72e4f8d9-71b3-4367-acbe-0ca5157599d4",
+          "location": "Jackett.Tray\\Main.cs",
+          "locationKind": "File",
+          "line": 101,
+          "column": 36,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppService.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "ACA": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "optional",
+              "effort": 5
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0012",
+          "incidentId": "be88e759-69c9-4961-98ca-be9a21b5b6eb",
+          "location": "Jackett.Tray\\Main.cs",
+          "locationKind": "File",
+          "line": 266,
+          "column": 32,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppService.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "ACA": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "optional",
+              "effort": 5
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0012",
+          "incidentId": "d13f5b98-820a-4c1a-9f0f-15a8fc91cc1f",
+          "location": "Jackett.Tray\\Program.cs",
+          "locationKind": "File",
+          "line": 18,
+          "column": 35,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppService.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "ACA": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "optional",
+              "effort": 5
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0012",
+          "incidentId": "ee1ea556-cbd3-4248-820e-d5de24613419",
+          "location": "Jackett.Tray\\Program.cs",
+          "locationKind": "File",
+          "line": 16,
+          "column": 36,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppService.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "ACA": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "optional",
+              "effort": 5
+            }
+          },
+          "labels": []
+        },
+        {
+          "ruleId": "Local.0012",
+          "incidentId": "c48eaff0-ae6a-46bb-ac8d-5de5bf5ae4cd",
+          "location": "Jackett.Tray\\Program.cs",
+          "locationKind": "File",
+          "line": 17,
+          "column": 35,
+          "targets": {
+            "AppService.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppService.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AKS.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "ACA": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Linux": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceContainer.Windows": {
+              "severity": "optional",
+              "effort": 5
+            },
+            "AppServiceManagedInstance.Windows": {
+              "severity": "optional",
+              "effort": 5
+            }
+          },
+          "labels": []
+        }
+      ]
+    },
+    {
+      "path": "Jackett.Updater\\Jackett.Updater.csproj",
+      "issues": 0,
+      "storyPoints": 0,
+      "properties": {
+        "appName": "Jackett.Updater",
+        "frameworks": [
+          "net9.0",
+          "net471"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ]
+      },
+      "incidents": []
+    }
+  ],
+  "rules": {
+    "Scale.0001": {
+      "id": "Scale.0001",
+      "description": "Static content detected.\n\nYour current approach of serving static content directly might lead to increased costs, performance issues, maintenance challenges (requiring application redeployment for content changes), and security risks.\n\nConsider moving static content to Azure Blob Storage and adding Azure CDN.",
+      "title": "Static content detected",
+      "severity": "optional",
+      "effort": 3,
+      "links": [
+        {
+          "title": "Azure Blob Storage",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2250574"
+        },
+        {
+          "title": "Azure CDN",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2250392"
+        }
+      ],
+      "labels": []
+    },
+    "Local.0010": {
+      "id": "Local.0010",
+      "description": "Service control manager API calls detected.\n\nIf you are targeting Managed Instance on Azure App Service, SCM access is unsupported. Run required services externally (VM/AKS) and interact via HTTP(S)/queues; use platform features instead of SCM.\n\nWhile if targeting other Azure compute services, applications cannot access SCM to manage/enumerate/start/stop services. Since some legacy code does require access to SCM, these APIs are faked in user mode to keep the applications working; but these stubs are essentially not functional.",
+      "title": "Service control manager API calls detected",
+      "severity": "mandatory",
+      "effort": 3,
+      "links": [
+        {
+          "title": "Service Control Manager (SCM) Access",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2250825"
+        }
+      ],
+      "labels": []
+    },
+    "Local.0012": {
+      "id": "Local.0012",
+      "description": "Local process start detected.\n\nWhile it is possible to launch new worker processes in either Azure App Service or Azure Kubernetes Service environments, it is an anti-pattern to do so. Both expect to have a single process running and launching others can make it difficult to manage and debug the applications. Expecting another process or service to already be running in parallel with the service will not work in Azure App Service and is an anti-pattern in Kubernetes.",
+      "title": "Local process start detected",
+      "severity": "optional",
+      "effort": 5,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?LinkID=2202641"
+        }
+      ],
+      "labels": []
+    },
+    "COM.0001": {
+      "id": "COM.0001",
+      "description": "Your application is using COM.\n\nManaged Instance on App Service now supports COM. You can use PowerShell install script to deploy and register COM components.\n\nKey Considerations:\n\n    1. Package COM components in a Zip file. Ensure this Zip file contains PowerShell install script named \"install.ps1\". To learn more visit the App Service Managed Instance documentation.\n    2. If your COM depends on Distributed COM (DCOM) technologies then you should evaluate alternate environment ex: Azure VM to install and maintain the DCOM server and then run COM components on Managed Instance on App Service.\n\nWhile if targeting other Azure compute services, out-of-process COM usage does not work in Azure App Service and is an anti-pattern in Azure Kubernetes Service and Azure Container Apps. In-process COM will work, but it is not possible to register new COM classes.\n\nConsider the following alternatives:\n\n    1. Review application architecture to see if the COM dependency can be removed. For example, Office COM dependencies might be replaceable with OpenXML packages which allow reading and writing Office files.\n    2. See whether registration-free COM is an option. Registration-free COM is supported for .NET 6+ apps running in Azure App Service.\n    3. Consider running the application in a container so that COM can be used. Azure App Service can host containerized apps.\n    4. Consider running the application in a VM.",
+      "title": "COM usage detected",
+      "severity": "mandatory",
+      "effort": 5,
+      "links": [
+        {
+          "title": "[Managed Instance] COM PowerShell install script",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2347059"
+        },
+        {
+          "title": "[Managed Instance] Configure App Service Managed Instance",
+          "url": "https://learn.microsoft.com/en-us/azure/app-service/configure-managed-instance"
+        },
+        {
+          "title": "OpenXML SDK (alternative to Office COM)",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2243263"
+        }
+      ],
+      "labels": []
+    },
+    "Local.0003": {
+      "id": "Local.0003",
+      "description": "Your application has local or network IO operations.\n\nIf you are targeting Managed Instance on Azure App Service, move persistent I/O to storage mounts (Azure Files/UNC). Keep local writes to temp only; connect to external dependencies via private endpoints/VNet to reduce latency.\n\nIO operations outside of the application folder might not be available on Azure App Service. Review and ensure IO APIs are attempting to access paths that will be available when your app is running on App Service sandbox. If you choose the containerized hosting option, your scenario still might be broken or have scalability issues.\n\nPossible solutions:\n    1. Files that the application needs can be deployed with the application or put in Azure Storage. You can use Azure Storage File Shares as a drop-in replacement for on-premises file share.\n    2. Other services that the application depends on might need to be migrated to Azure, this way you will get the benefit of lower latency in the cloud.\n    3. If your application needs to depend on services that run on-premise, you can connect your Azure and local networks with ExpressRoute, Hybrid Connections, or VPN solutions.",
+      "title": "Local or network IO operations detected",
+      "severity": "potential",
+      "effort": 3,
+      "links": [
+        {
+          "title": "[Managed Instance] Storage mounts",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2346952"
+        },
+        {
+          "title": "Azure file share",
+          "url": "https://go.microsoft.com/fwlink/?LinkID=2242591"
+        },
+        {
+          "title": "ExpressRoute",
+          "url": "https://go.microsoft.com/fwlink/?LinkID=2250577"
+        },
+        {
+          "title": "Hybrid Connections",
+          "url": "https://go.microsoft.com/fwlink/?LinkID=2242588"
+        },
+        {
+          "title": "Connect an on-prem network",
+          "url": "https://go.microsoft.com/fwlink/?LinkID=2242591"
+        },
+        {
+          "title": "Design to scale out",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2251007"
+        }
+      ],
+      "labels": []
+    },
+    "Local.0006": {
+      "id": "Local.0006",
+      "description": "Your application has hardcoded URLs that might correspond to services that are not accessible on Azure.\n\nReview and ensure that the application is attempting to access URLs that would be available from Azure. You might need to migrate those services to Azure too, this way you will get the benefit of lower latency in the cloud.\n\nIf your application needs to depend on services that run on-premises, you can connect your Azure and local networks with ExpressRoute, Hybrid Connections, or VPN solutions.",
+      "title": "Hardcoded URLs detected",
+      "severity": "potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "ExpressRoute",
+          "url": "https://go.microsoft.com/fwlink/?LinkID=2250577"
+        },
+        {
+          "title": "Hybrid Connections",
+          "url": "https://go.microsoft.com/fwlink/?LinkID=2242588"
+        },
+        {
+          "title": "Connect an on-prem network",
+          "url": "https://go.microsoft.com/fwlink/?LinkID=2242591"
+        }
+      ],
+      "labels": []
+    },
+    "Local.0007": {
+      "id": "Local.0007",
+      "description": "Local OS environment access detected.\n\nIf you are targeting Managed Instance on Azure App Service, Read config via App Settings or App Configuration; avoid machine‑specific environment APIs. Persist environment setup via install scripts when needed.\n\nWhen running in Azure App Service environment, your application can read environment variables that you define in App Service settings. Using environment API other than reading environment variables might indicate that your application depends on some local machine's features and might be broken on App Service sandbox or not scale well. Review your scenarios and either refactor them to be more cloud friendly or choose the option in App Service to host your application in the sandbox for Windows Container Web Apps.\n\nIf you choose to use other Azure hosting options such as Azure Container Apps (ACA) or Azure Kubernetes Service (AKS), environment APIs might work, however scaling still might be an issue.",
+      "title": "Local OS environment access detected",
+      "severity": "potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "General App Service sandbox restrictions",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2250496"
+        },
+        {
+          "title": "App Service sandbox for Windows Container Web Apps",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2251963"
+        },
+        {
+          "title": "Design to scale out",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2251007"
+        }
+      ],
+      "labels": []
+    }
+  },
+  "security": [
+    {
+      "title": "Microsoft Security Advisory CVE-2026-33116 - .NET, .NET Framework, and Visual Studio Denial of Service Vulnerability",
+      "storyPoint": 1,
+      "id": "CVE-2026-33116",
+      "severity": "mandatory",
+      "description": "[CVE-2026-33116](https://github.com/advisories/GHSA-9p97-h2g6-4jm5): Microsoft Security Advisory CVE-2026-33116 - .NET, .NET Framework, and Visual Studio Denial of Service Vulnerability\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Security.Cryptography.Xml:8.0.2 (transitive, included in Jackett.Server/Jackett.Server.csproj)\n\nRecommended fix:\n  - Upgrade System.Security.Cryptography.Xml to 8.0.3 or later",
+      "category": "CVE",
+      "evidence": {
+        "explanation": "[CVE-2026-33116](https://github.com/advisories/GHSA-9p97-h2g6-4jm5): Microsoft Security Advisory CVE-2026-33116 - .NET, .NET Framework, and Visual Studio Denial of Service Vulnerability\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Security.Cryptography.Xml:8.0.2 (transitive, included in Jackett.Server/Jackett.Server.csproj)\n\nRecommended fix:\n  - Upgrade System.Security.Cryptography.Xml to 8.0.3 or later",
+        "files": [
+          "Jackett.Server/Jackett.Server.csproj"
+        ]
+      }
+    },
+    {
+      "title": "Microsoft Security Advisory CVE-2026-26171 - .NET Denial of Service Vulnerability",
+      "storyPoint": 1,
+      "id": "CVE-2026-26171",
+      "severity": "mandatory",
+      "description": "[CVE-2026-26171](https://github.com/advisories/GHSA-x96m-3w42-r7gc): Microsoft Security Advisory CVE-2026-26171 - .NET Denial of Service Vulnerability\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Security.Cryptography.Xml:8.0.2 (transitive, included in Jackett.Server/Jackett.Server.csproj)\n\nRecommended fix:\n  - Upgrade System.Security.Cryptography.Xml to 8.0.3 or later",
+      "category": "CVE",
+      "evidence": {
+        "explanation": "[CVE-2026-26171](https://github.com/advisories/GHSA-x96m-3w42-r7gc): Microsoft Security Advisory CVE-2026-26171 - .NET Denial of Service Vulnerability\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Security.Cryptography.Xml:8.0.2 (transitive, included in Jackett.Server/Jackett.Server.csproj)\n\nRecommended fix:\n  - Upgrade System.Security.Cryptography.Xml to 8.0.3 or later",
+        "files": [
+          "Jackett.Server/Jackett.Server.csproj"
+        ]
+      }
+    },
+    {
+      "title": ".NET Core Information Disclosure",
+      "storyPoint": 1,
+      "id": "CVE-2018-8292",
+      "severity": "mandatory",
+      "description": "[CVE-2018-8292](https://github.com/advisories/GHSA-7jgj-8wvc-jh57): .NET Core Information Disclosure\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Net.Http:4.3.0 (transitive, included in multiple projects)\n\nRecommended fix:\n  - Upgrade System.Net.Http to 4.3.4 or later",
+      "category": "CVE",
+      "evidence": {
+        "explanation": "[CVE-2018-8292](https://github.com/advisories/GHSA-7jgj-8wvc-jh57): .NET Core Information Disclosure\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Net.Http:4.3.0 (transitive, included in multiple projects)\n\nRecommended fix:\n  - Upgrade System.Net.Http to 4.3.4 or later",
+        "files": [
+          "Jackett.Common/Jackett.Common.csproj",
+          "Jackett.Server/Jackett.Server.csproj",
+          "Jackett.Service/Jackett.Service.csproj",
+          "Jackett.Tray/Jackett.Tray.csproj",
+          "Jackett.Updater/Jackett.Updater.csproj"
+        ]
+      }
+    },
+    {
+      "title": "Regular Expression Denial of Service in System.Text.RegularExpressions",
+      "storyPoint": 1,
+      "id": "CVE-2019-0820",
+      "severity": "mandatory",
+      "description": "[CVE-2019-0820](https://github.com/advisories/GHSA-cmhx-cq75-c4mj): Regular Expression Denial of Service in System.Text.RegularExpressions\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Text.RegularExpressions:4.3.0 (transitive, included in multiple projects)\n\nRecommended fix:\n  - Upgrade System.Text.RegularExpressions to 4.3.1 or later",
+      "category": "CVE",
+      "evidence": {
+        "explanation": "[CVE-2019-0820](https://github.com/advisories/GHSA-cmhx-cq75-c4mj): Regular Expression Denial of Service in System.Text.RegularExpressions\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Text.RegularExpressions:4.3.0 (transitive, included in multiple projects)\n\nRecommended fix:\n  - Upgrade System.Text.RegularExpressions to 4.3.1 or later",
+        "files": [
+          "Jackett.Common/Jackett.Common.csproj",
+          "Jackett.Server/Jackett.Server.csproj",
+          "Jackett.Service/Jackett.Service.csproj",
+          "Jackett.Tray/Jackett.Tray.csproj",
+          "Jackett.Updater/Jackett.Updater.csproj"
+        ]
+      }
+    },
+    {
+      "title": "Missing Release of Resource after Effective Lifetime",
+      "storyPoint": 3,
+      "id": "CWE-772",
+      "severity": "potential",
+      "description": "The product does not release a resource after its effective lifetime has ended, i.e., after the resource is no longer needed.",
+      "category": "Code Quality",
+      "evidence": {
+        "explanation": "In UpdateService.ExtractUpdate() (lines 289-296), Stream objects 'inStream' and 'gzipStream' are opened without using 'using' blocks. If tarArchive.ExtractContents() or subsequent operations throw an exception, these streams will not be closed/disposed, resulting in a resource leak.",
+        "files": [
+          "Jackett.Common/Services/UpdateService.cs"
+        ]
+      }
+    },
+    {
+      "title": "Missing Release of File Descriptor or Handle after Effective Lifetime",
+      "storyPoint": 3,
+      "id": "CWE-775",
+      "severity": "potential",
+      "description": "The product does not release a file descriptor or handle after its effective lifetime has ended, i.e., after the file descriptor/handle is no longer needed.",
+      "category": "Code Quality",
+      "evidence": {
+        "explanation": "In UpdateService.ExtractUpdate() (lines 289-296), File.OpenRead() returns a stream that is closed with explicit .Close() calls rather than using 'using' blocks. If an exception occurs during extraction, the file handles for 'inStream' and 'gzipStream' will not be released.",
+        "files": [
+          "Jackett.Common/Services/UpdateService.cs"
+        ]
+      }
+    },
+    {
+      "title": "Use of Hard-coded Cryptographic Key",
+      "storyPoint": 5,
+      "id": "CWE-321",
+      "severity": "potential",
+      "description": "The product uses a hard-coded, unchangeable cryptographic key.",
+      "category": "Credentials & Secrets",
+      "evidence": {
+        "explanation": "In ProtectionService.cs (line 10), a hard-coded cryptographic key 'ApplicationKey' is defined as a constant string. This key is used as the default protection purpose for ASP.NET Core Data Protection when the JACKETT_KEY environment variable is not set (line 18). Any deployment that does not set JACKETT_KEY will use this shared, publicly-known key to protect sensitive data such as indexer credentials.",
+        "files": [
+          "Jackett.Server/Services/ProtectionService.cs"
+        ]
+      }
+    },
+    {
+      "title": "Incorrect Permission Assignment for Critical Resource",
+      "storyPoint": 5,
+      "id": "CWE-732",
+      "severity": "optional",
+      "description": "The product specifies permissions for a security-critical resource in a way that allows that resource to be read or modified by unintended actors.",
+      "category": "Credentials & Secrets",
+      "evidence": {
+        "explanation": "In ConfigurationService.cs (lines 58-60, 132-133, 144-145), the application's data directory and migrated configuration files are assigned FileSystemRights.FullControl for WellKnownSidType.WorldSid (Everyone), granting all local users full read/write access to the Jackett configuration directory which contains API keys and indexer credentials.",
+        "files": [
+          "Jackett.Common/Services/ConfigurationService.cs"
+        ]
+      }
+    }
+  ]
+}
