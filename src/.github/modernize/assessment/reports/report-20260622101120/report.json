@@ -1490,7 +1490,7 @@
     },
     "COM.0001": {
       "id": "COM.0001",
-      "description": "Your application is using COM.\n\nManaged Instance on App Service now supports COM. You can use PowerShell install script to deploy and register COM components.\n\nKey Considerations:\n\n    1. Package COM components in a Zip file. Ensure this Zip file contains PowerShell install script named \u0022install.ps1\u0022. To learn more visit the App Service Managed Instance documentation.\n    2. If your COM depends on Distributed COM (DCOM) technologies then you should evaluate alternate environment ex: Azure VM to install and maintain the DCOM server and then run COM components on Managed Instance on App Service.\n\nWhile if targeting other Azure compute services, out-of-process COM usage does not work in Azure App Service and is an anti-pattern in Azure Kubernetes Service and Azure Container Apps. In-process COM will work, but it is not possible to register new COM classes.\n\nConsider the following alternatives:\n\n    1. Review application architecture to see if the COM dependency can be removed. For example, Office COM dependencies might be replaceable with OpenXML packages which allow reading and writing Office files.\n    2. See whether registration-free COM is an option. Registration-free COM is supported for .NET 6\u002B apps running in Azure App Service.\n    3. Consider running the application in a container so that COM can be used. Azure App Service can host containerized apps.\n    4. Consider running the application in a VM.",
+      "description": "Your application is using COM.\n\nManaged Instance on App Service now supports COM. You can use PowerShell install script to deploy and register COM components.\n\nKey Considerations:\n\n    1. Package COM components in a Zip file. Ensure this Zip file contains PowerShell install script named \"install.ps1\". To learn more visit the App Service Managed Instance documentation.\n    2. If your COM depends on Distributed COM (DCOM) technologies then you should evaluate alternate environment ex: Azure VM to install and maintain the DCOM server and then run COM components on Managed Instance on App Service.\n\nWhile if targeting other Azure compute services, out-of-process COM usage does not work in Azure App Service and is an anti-pattern in Azure Kubernetes Service and Azure Container Apps. In-process COM will work, but it is not possible to register new COM classes.\n\nConsider the following alternatives:\n\n    1. Review application architecture to see if the COM dependency can be removed. For example, Office COM dependencies might be replaceable with OpenXML packages which allow reading and writing Office files.\n    2. See whether registration-free COM is an option. Registration-free COM is supported for .NET 6+ apps running in Azure App Service.\n    3. Consider running the application in a container so that COM can be used. Azure App Service can host containerized apps.\n    4. Consider running the application in a VM.",
       "title": "COM usage detected",
       "severity": "mandatory",
       "effort": 5,
@@ -1568,7 +1568,7 @@
     },
     "Local.0007": {
       "id": "Local.0007",
-      "description": "Local OS environment access detected.\n\nIf you are targeting Managed Instance on Azure App Service, Read config via App Settings or App Configuration; avoid machine\u2011specific environment APIs. Persist environment setup via install scripts when needed.\n\nWhen running in Azure App Service environment, your application can read environment variables that you define in App Service settings. Using environment API other than reading environment variables might indicate that your application depends on some local machine\u0027s features and might be broken on App Service sandbox or not scale well. Review your scenarios and either refactor them to be more cloud friendly or choose the option in App Service to host your application in the sandbox for Windows Container Web Apps.\n\nIf you choose to use other Azure hosting options such as Azure Container Apps (ACA) or Azure Kubernetes Service (AKS), environment APIs might work, however scaling still might be an issue.",
+      "description": "Local OS environment access detected.\n\nIf you are targeting Managed Instance on Azure App Service, Read config via App Settings or App Configuration; avoid machine\u2011specific environment APIs. Persist environment setup via install scripts when needed.\n\nWhen running in Azure App Service environment, your application can read environment variables that you define in App Service settings. Using environment API other than reading environment variables might indicate that your application depends on some local machine's features and might be broken on App Service sandbox or not scale well. Review your scenarios and either refactor them to be more cloud friendly or choose the option in App Service to host your application in the sandbox for Windows Container Web Apps.\n\nIf you choose to use other Azure hosting options such as Azure Container Apps (ACA) or Azure Kubernetes Service (AKS), environment APIs might work, however scaling still might be an issue.",
       "title": "Local OS environment access detected",
       "severity": "potential",
       "effort": 1,
@@ -1588,5 +1588,163 @@
       ],
       "labels": []
     }
-  }
+  },
+  "security": [
+    {
+      "id": "CVE-2026-33116",
+      "title": "Microsoft Security Advisory CVE-2026-33116 - .NET, .NET Framework, and Visual Studio Denial of Service Vulnerability",
+      "category": "CVE",
+      "severity": "mandatory",
+      "description": "[CVE-2026-33116](https://github.com/advisories/GHSA-37gx-xxp4-5rgx): Microsoft Security Advisory CVE-2026-33116 - .NET, .NET Framework, and Visual Studio Denial of Service Vulnerability\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Security.Cryptography.Xml:8.0.2 (transitive, pulled by Microsoft.AspNetCore at src/Jackett.Server/Jackett.Server.csproj:45)\n\nRecommended fix:\n  - Upgrade System.Security.Cryptography.Xml to 8.0.3 or later",
+      "evidence": {
+        "files": [
+          "src/Jackett.Server/Jackett.Server.csproj:45"
+        ],
+        "explanation": "[CVE-2026-33116](https://github.com/advisories/GHSA-37gx-xxp4-5rgx): Microsoft Security Advisory CVE-2026-33116 - .NET, .NET Framework, and Visual Studio Denial of Service Vulnerability\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Security.Cryptography.Xml:8.0.2 (transitive, pulled by Microsoft.AspNetCore at src/Jackett.Server/Jackett.Server.csproj:45)\n\nRecommended fix:\n  - Upgrade System.Security.Cryptography.Xml to 8.0.3 or later"
+      },
+      "storyPoint": 1
+    },
+    {
+      "id": "CVE-2026-26171",
+      "title": "Microsoft Security Advisory CVE-2026-26171 - .NET Denial of Service Vulnerability",
+      "category": "CVE",
+      "severity": "mandatory",
+      "description": "[CVE-2026-26171](https://github.com/advisories/GHSA-w3x6-4m5h-cxqf): Microsoft Security Advisory CVE-2026-26171 - .NET Denial of Service Vulnerability\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Security.Cryptography.Xml:8.0.2 (transitive, pulled by Microsoft.AspNetCore at src/Jackett.Server/Jackett.Server.csproj:45)\n\nRecommended fix:\n  - Upgrade System.Security.Cryptography.Xml to 8.0.3 or later",
+      "evidence": {
+        "files": [
+          "src/Jackett.Server/Jackett.Server.csproj:45"
+        ],
+        "explanation": "[CVE-2026-26171](https://github.com/advisories/GHSA-w3x6-4m5h-cxqf): Microsoft Security Advisory CVE-2026-26171 - .NET Denial of Service Vulnerability\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Security.Cryptography.Xml:8.0.2 (transitive, pulled by Microsoft.AspNetCore at src/Jackett.Server/Jackett.Server.csproj:45)\n\nRecommended fix:\n  - Upgrade System.Security.Cryptography.Xml to 8.0.3 or later"
+      },
+      "storyPoint": 1
+    },
+    {
+      "id": "CVE-2018-8292",
+      "title": ".NET Core Information Disclosure",
+      "category": "CVE",
+      "severity": "mandatory",
+      "description": "[CVE-2018-8292](https://github.com/advisories/GHSA-7jgj-8wvc-jh57): .NET Core Information Disclosure\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Net.Http:4.3.0 (transitive, pulled by Microsoft.AspNetCore.Http at src/Jackett.Common/Jackett.Common.csproj:20)\n  - System.Net.Http:4.3.0 (transitive in Jackett.Service, Jackett.Tray, Jackett.Updater, Jackett.Server)\n\nRecommended fix:\n  - Upgrade System.Net.Http to 4.3.4 or later",
+      "evidence": {
+        "files": [
+          "src/Jackett.Common/Jackett.Common.csproj:20",
+          "src/Jackett.Server/Jackett.Server.csproj:45"
+        ],
+        "explanation": "[CVE-2018-8292](https://github.com/advisories/GHSA-7jgj-8wvc-jh57): .NET Core Information Disclosure\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Net.Http:4.3.0 (transitive, pulled by Microsoft.AspNetCore.Http at src/Jackett.Common/Jackett.Common.csproj:20)\n  - System.Net.Http:4.3.0 (transitive in Jackett.Service, Jackett.Tray, Jackett.Updater, Jackett.Server)\n\nRecommended fix:\n  - Upgrade System.Net.Http to 4.3.4 or later"
+      },
+      "storyPoint": 1
+    },
+    {
+      "id": "CVE-2019-0820",
+      "title": "Regular Expression Denial of Service in System.Text.RegularExpressions",
+      "category": "CVE",
+      "severity": "mandatory",
+      "description": "[CVE-2019-0820](https://github.com/advisories/GHSA-cmhx-cq75-c4mj): Regular Expression Denial of Service in System.Text.RegularExpressions\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Text.RegularExpressions:4.3.0 (transitive, pulled by Microsoft.AspNetCore.Http at src/Jackett.Common/Jackett.Common.csproj:20)\n  - System.Text.RegularExpressions:4.3.0 (transitive in Jackett.Service, Jackett.Tray, Jackett.Updater, Jackett.Server)\n\nRecommended fix:\n  - Upgrade System.Text.RegularExpressions to 4.3.1 or later",
+      "evidence": {
+        "files": [
+          "src/Jackett.Common/Jackett.Common.csproj:20",
+          "src/Jackett.Server/Jackett.Server.csproj:45"
+        ],
+        "explanation": "[CVE-2019-0820](https://github.com/advisories/GHSA-cmhx-cq75-c4mj): Regular Expression Denial of Service in System.Text.RegularExpressions\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Text.RegularExpressions:4.3.0 (transitive, pulled by Microsoft.AspNetCore.Http at src/Jackett.Common/Jackett.Common.csproj:20)\n  - System.Text.RegularExpressions:4.3.0 (transitive in Jackett.Service, Jackett.Tray, Jackett.Updater, Jackett.Server)\n\nRecommended fix:\n  - Upgrade System.Text.RegularExpressions to 4.3.1 or later"
+      },
+      "storyPoint": 1
+    },
+    {
+      "id": "CWE-477",
+      "title": "Use of Obsolete Function",
+      "category": "Code Quality",
+      "severity": "optional",
+      "description": "The code uses deprecated or obsolete functions, which suggests that the code has not been actively reviewed or maintained.",
+      "evidence": {
+        "files": [
+          "src/Jackett.Common/Utils/Clients/HttpWebClient.cs"
+        ],
+        "explanation": "HttpWebClient.cs at lines 20-21 extends a legacy WebClient base class and uses the obsolete HttpWebRequest type (line 39, 42). The file itself contains a TODO comment acknowledging it is a legacy implementation ('This implementation is legacy and it is used only by Mono version \u2014 TODO: Merge with HttpWebClient2 or remove when we drop support for Mono 5.x'). System.Net.HttpWebRequest is deprecated in modern .NET in favor of HttpClient."
+      },
+      "storyPoint": 1
+    },
+    {
+      "id": "CWE-681",
+      "title": "Incorrect Conversion between Numeric Types",
+      "category": "Code Quality",
+      "severity": "potential",
+      "description": "When converting from one data type to another, such as long to integer, data can be omitted or translated in a way that produces unexpected values. If the resulting values are used in a sensitive context, then dangerous behaviors may occur.",
+      "evidence": {
+        "files": [
+          "src/Jackett.Common/Utils/ParseUtil.cs"
+        ],
+        "explanation": "ParseUtil.cs at lines 155 and 164 performs explicit casts from float to long: '(long)value' and '(long)(kb * 1024f)'. Chained calculations like BytesFromTB -> BytesFromGB -> BytesFromMB -> BytesFromKB multiply float values repeatedly, which can accumulate floating-point precision errors before the final cast to long. For large file sizes the result may be slightly incorrect."
+      },
+      "storyPoint": 3
+    },
+    {
+      "id": "CWE-567",
+      "title": "Unsynchronized Access to Shared Data in a Multithreaded Context",
+      "category": "Concurrency & Synchronization",
+      "severity": "potential",
+      "description": "The product does not properly synchronize shared data, such as static variables across threads, which can lead to undefined behavior and unpredictable data changes.",
+      "evidence": {
+        "files": [
+          "src/Jackett.Common/Utils/StringUtil.cs"
+        ],
+        "explanation": "StringUtil.cs at line 101 declares a private static field: private static char[] MakeValidFileName_invalids. At line 112, this field is read and lazily initialized without any lock or thread-safe mechanism: \u000bar invalids = MakeValidFileName_invalids ?? (MakeValidFileName_invalids = Path.GetInvalidFileNameChars()). In a multithreaded environment, multiple threads could concurrently read null and assign to the static field without synchronization, constituting unsynchronized access to shared data."
+      },
+      "storyPoint": 5
+    },
+    {
+      "id": "CWE-321",
+      "title": "Use of Hard-coded Cryptographic Key",
+      "category": "Credentials & Secrets",
+      "severity": "potential",
+      "description": "The product uses a hard-coded, unchangeable cryptographic key.",
+      "evidence": {
+        "files": [
+          "src/Jackett.Common/Indexers/Definitions/Wolfmax4K.cs"
+        ],
+        "explanation": "Wolfmax4K.cs at line 53 declares a hard-coded AES encryption key (private const string TorrentLinkEncryptionKey). This key is used at line 188 as the passphrase for the OpenSSLDecryptAsync method to decrypt torrent download links. Using a hard-coded cryptographic key means it cannot be changed without recompiling and is exposed in source code."
+      },
+      "storyPoint": 5
+    },
+    {
+      "id": "CWE-778",
+      "title": "Insufficient Logging",
+      "category": "Credentials & Secrets",
+      "severity": "potential",
+      "description": "When a security-critical event occurs, the product either does not record the event or omits important details about the event when logging it.",
+      "evidence": {
+        "files": [
+          "src/Jackett.Server/Controllers/ResultsController.cs"
+        ],
+        "explanation": "ResultsController.cs, in the RequiresApiKey.OnActionExecuting method (lines 33-48), validates the API key but does not log failed authentication attempts. When queryApiKey != validApiKey, the code returns an Unauthorized result without logging, making it impossible to detect brute-force attempts or unauthorized access."
+      },
+      "storyPoint": 3
+    },
+    {
+      "id": "CWE-798",
+      "title": "Use of Hard-coded Credentials",
+      "category": "Credentials & Secrets",
+      "severity": "optional",
+      "description": "The product contains hard-coded credentials, such as a password or cryptographic key.",
+      "evidence": {
+        "files": [
+          "src/Jackett.Common/Indexers/Definitions/Wolfmax4K.cs"
+        ],
+        "explanation": "Wolfmax4K.cs at line 53 contains a hard-coded credential string TorrentLinkEncryptionKey used as a cryptographic passphrase for AES decryption of torrent links (line 188). This constitutes hard-coded credentials embedded directly in source code."
+      },
+      "storyPoint": 5
+    },
+    {
+      "id": "CWE-611",
+      "title": "Improper Restriction of XML External Entity Reference",
+      "category": "File & Path Security",
+      "severity": "optional",
+      "description": "The product processes an XML document that can contain XML entities with URIs that resolve to documents outside of the intended sphere of control, causing the product to embed incorrect documents into its output.",
+      "evidence": {
+        "files": [
+          "src/Jackett.Common/Indexers/Definitions/EraiRaws.cs"
+        ],
+        "explanation": "In EraiRaws.cs at line 212-213, a new XmlDocument() is created and LoadXml() is called without explicitly setting XmlResolver = null. When targeting net471 (.NET Framework), XmlDocument allows DTD processing and external entity resolution by default, which can expose the application to XXE attacks if the external RSS feed content is crafted maliciously."
+      },
+      "storyPoint": 5
+    }
+  ]
 }
