@@ -1,0 +1,129 @@
+{
+  "GeneratedAt": "2026-06-22T07:27:32.0000000Z",
+  "ProjectPath": ".",
+  "CveFindings": [
+    {
+      "Files": [
+        "Jackett.Server/Jackett.Server.csproj"
+      ],
+      "Id": "CVE-2026-33116",
+      "Severity": "mandatory",
+      "Description": "[CVE-2026-33116](https://github.com/advisories/GHSA-9p97-h2g6-4jm5): Microsoft Security Advisory CVE-2026-33116 - .NET, .NET Framework, and Visual Studio Denial of Service Vulnerability\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Security.Cryptography.Xml:8.0.2 (transitive, included in Jackett.Server/Jackett.Server.csproj)\n\nRecommended fix:\n  - Upgrade System.Security.Cryptography.Xml to 8.0.3 or later",
+      "Explanation": "[CVE-2026-33116](https://github.com/advisories/GHSA-9p97-h2g6-4jm5): Microsoft Security Advisory CVE-2026-33116 - .NET, .NET Framework, and Visual Studio Denial of Service Vulnerability\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Security.Cryptography.Xml:8.0.2 (transitive, included in Jackett.Server/Jackett.Server.csproj)\n\nRecommended fix:\n  - Upgrade System.Security.Cryptography.Xml to 8.0.3 or later",
+      "Name": "Microsoft Security Advisory CVE-2026-33116 - .NET, .NET Framework, and Visual Studio Denial of Service Vulnerability",
+      "Category": "CVE",
+      "StoryPoint": 1
+    },
+    {
+      "Files": [
+        "Jackett.Server/Jackett.Server.csproj"
+      ],
+      "Id": "CVE-2026-26171",
+      "Severity": "mandatory",
+      "Description": "[CVE-2026-26171](https://github.com/advisories/GHSA-x96m-3w42-r7gc): Microsoft Security Advisory CVE-2026-26171 - .NET Denial of Service Vulnerability\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Security.Cryptography.Xml:8.0.2 (transitive, included in Jackett.Server/Jackett.Server.csproj)\n\nRecommended fix:\n  - Upgrade System.Security.Cryptography.Xml to 8.0.3 or later",
+      "Explanation": "[CVE-2026-26171](https://github.com/advisories/GHSA-x96m-3w42-r7gc): Microsoft Security Advisory CVE-2026-26171 - .NET Denial of Service Vulnerability\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Security.Cryptography.Xml:8.0.2 (transitive, included in Jackett.Server/Jackett.Server.csproj)\n\nRecommended fix:\n  - Upgrade System.Security.Cryptography.Xml to 8.0.3 or later",
+      "Name": "Microsoft Security Advisory CVE-2026-26171 - .NET Denial of Service Vulnerability",
+      "Category": "CVE",
+      "StoryPoint": 1
+    },
+    {
+      "Files": [
+        "Jackett.Common/Jackett.Common.csproj",
+        "Jackett.Server/Jackett.Server.csproj",
+        "Jackett.Service/Jackett.Service.csproj",
+        "Jackett.Tray/Jackett.Tray.csproj",
+        "Jackett.Updater/Jackett.Updater.csproj"
+      ],
+      "Id": "CVE-2018-8292",
+      "Severity": "mandatory",
+      "Description": "[CVE-2018-8292](https://github.com/advisories/GHSA-7jgj-8wvc-jh57): .NET Core Information Disclosure\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Net.Http:4.3.0 (transitive, included in multiple projects)\n\nRecommended fix:\n  - Upgrade System.Net.Http to 4.3.4 or later",
+      "Explanation": "[CVE-2018-8292](https://github.com/advisories/GHSA-7jgj-8wvc-jh57): .NET Core Information Disclosure\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Net.Http:4.3.0 (transitive, included in multiple projects)\n\nRecommended fix:\n  - Upgrade System.Net.Http to 4.3.4 or later",
+      "Name": ".NET Core Information Disclosure",
+      "Category": "CVE",
+      "StoryPoint": 1
+    },
+    {
+      "Files": [
+        "Jackett.Common/Jackett.Common.csproj",
+        "Jackett.Server/Jackett.Server.csproj",
+        "Jackett.Service/Jackett.Service.csproj",
+        "Jackett.Tray/Jackett.Tray.csproj",
+        "Jackett.Updater/Jackett.Updater.csproj"
+      ],
+      "Id": "CVE-2019-0820",
+      "Severity": "mandatory",
+      "Description": "[CVE-2019-0820](https://github.com/advisories/GHSA-cmhx-cq75-c4mj): Regular Expression Denial of Service in System.Text.RegularExpressions\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Text.RegularExpressions:4.3.0 (transitive, included in multiple projects)\n\nRecommended fix:\n  - Upgrade System.Text.RegularExpressions to 4.3.1 or later",
+      "Explanation": "[CVE-2019-0820](https://github.com/advisories/GHSA-cmhx-cq75-c4mj): Regular Expression Denial of Service in System.Text.RegularExpressions\n\nSeverity: HIGH\n\nAffected dependencies:\n  - System.Text.RegularExpressions:4.3.0 (transitive, included in multiple projects)\n\nRecommended fix:\n  - Upgrade System.Text.RegularExpressions to 4.3.1 or later",
+      "Name": "Regular Expression Denial of Service in System.Text.RegularExpressions",
+      "Category": "CVE",
+      "StoryPoint": 1
+    }
+  ],
+  "Summary": {
+    "TotalRulesAssessed": 59,
+    "TotalFindings": 8,
+    "CweCount": 4,
+    "RulesPassed": 55,
+    "BySeverity": {
+      "mandatory": 4,
+      "potential": 3,
+      "optional": 1
+    },
+    "CveCount": 4,
+    "ByCategory": {
+      "Credentials & Secrets": 2,
+      "Code Quality": 2,
+      "CVE": 4
+    }
+  },
+  "CweFindings": [
+    {
+      "Files": [
+        "Jackett.Common/Services/UpdateService.cs"
+      ],
+      "Id": "CWE-772",
+      "Severity": "potential",
+      "Description": "The product does not release a resource after its effective lifetime has ended, i.e., after the resource is no longer needed.",
+      "Explanation": "In UpdateService.ExtractUpdate() (lines 289-296), Stream objects 'inStream' and 'gzipStream' are opened without using 'using' blocks. If tarArchive.ExtractContents() or subsequent operations throw an exception, these streams will not be closed/disposed, resulting in a resource leak.",
+      "Name": "Missing Release of Resource after Effective Lifetime",
+      "Category": "Code Quality",
+      "StoryPoint": 3
+    },
+    {
+      "Files": [
+        "Jackett.Common/Services/UpdateService.cs"
+      ],
+      "Id": "CWE-775",
+      "Severity": "potential",
+      "Description": "The product does not release a file descriptor or handle after its effective lifetime has ended, i.e., after the file descriptor/handle is no longer needed.",
+      "Explanation": "In UpdateService.ExtractUpdate() (lines 289-296), File.OpenRead() returns a stream that is closed with explicit .Close() calls rather than using 'using' blocks. If an exception occurs during extraction, the file handles for 'inStream' and 'gzipStream' will not be released.",
+      "Name": "Missing Release of File Descriptor or Handle after Effective Lifetime",
+      "Category": "Code Quality",
+      "StoryPoint": 3
+    },
+    {
+      "Files": [
+        "Jackett.Server/Services/ProtectionService.cs"
+      ],
+      "Id": "CWE-321",
+      "Severity": "potential",
+      "Description": "The product uses a hard-coded, unchangeable cryptographic key.",
+      "Explanation": "In ProtectionService.cs (line 10), a hard-coded cryptographic key 'ApplicationKey' is defined as a constant string. This key is used as the default protection purpose for ASP.NET Core Data Protection when the JACKETT_KEY environment variable is not set (line 18). Any deployment that does not set JACKETT_KEY will use this shared, publicly-known key to protect sensitive data such as indexer credentials.",
+      "Name": "Use of Hard-coded Cryptographic Key",
+      "Category": "Credentials & Secrets",
+      "StoryPoint": 5
+    },
+    {
+      "Files": [
+        "Jackett.Common/Services/ConfigurationService.cs"
+      ],
+      "Id": "CWE-732",
+      "Severity": "optional",
+      "Description": "The product specifies permissions for a security-critical resource in a way that allows that resource to be read or modified by unintended actors.",
+      "Explanation": "In ConfigurationService.cs (lines 58-60, 132-133, 144-145), the application's data directory and migrated configuration files are assigned FileSystemRights.FullControl for WellKnownSidType.WorldSid (Everyone), granting all local users full read/write access to the Jackett configuration directory which contains API keys and indexer credentials.",
+      "Name": "Incorrect Permission Assignment for Critical Resource",
+      "Category": "Credentials & Secrets",
+      "StoryPoint": 5
+    }
+  ]
+}

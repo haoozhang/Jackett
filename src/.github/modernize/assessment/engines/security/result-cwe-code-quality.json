@@ -1,0 +1,228 @@
+{
+  "analysis_method": "LLM",
+  "timestamp": "2026-06-22T07:25:07Z",
+  "input_name": "CWE - Code Quality",
+  "execution_time_seconds": 0,
+  "result": {
+    "values": [
+      {
+        "severity": "potential",
+        "category": "Code Quality",
+        "name": "Improper Handling of Length Parameter Inconsistency",
+        "status": "NOT_FOUND",
+        "description": "The product parses a formatted message or structure, but it does not handle or incorrectly handles a length field that is inconsistent with the actual length of the associated data.",
+        "storyPoint": 3,
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "id": "CWE-130"
+      },
+      {
+        "severity": "potential",
+        "category": "Code Quality",
+        "name": "Missing Initialization of a Variable",
+        "status": "NOT_FOUND",
+        "description": "The product does not initialize critical variables, which causes the execution environment to use unexpected values.",
+        "storyPoint": 2,
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "id": "CWE-456"
+      },
+      {
+        "severity": "potential",
+        "category": "Code Quality",
+        "name": "Use of Uninitialized Variable",
+        "status": "NOT_FOUND",
+        "description": "The code uses a variable that has not been initialized, leading to unpredictable or unintended results.",
+        "storyPoint": 2,
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "id": "CWE-457"
+      },
+      {
+        "severity": "optional",
+        "category": "Code Quality",
+        "name": "Use of Obsolete Function",
+        "status": "NOT_FOUND",
+        "description": "The code uses deprecated or obsolete functions, which suggests that the code has not been actively reviewed or maintained.",
+        "storyPoint": 1,
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "id": "CWE-477"
+      },
+      {
+        "severity": "optional",
+        "category": "Code Quality",
+        "name": "Expression is Always False",
+        "status": "NOT_FOUND",
+        "description": "The product contains an expression that will always evaluate to false.",
+        "storyPoint": 1,
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "id": "CWE-570"
+      },
+      {
+        "severity": "optional",
+        "category": "Code Quality",
+        "name": "Expression is Always True",
+        "status": "NOT_FOUND",
+        "description": "The product contains an expression that will always evaluate to true.",
+        "storyPoint": 1,
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "id": "CWE-571"
+      },
+      {
+        "severity": "potential",
+        "category": "Code Quality",
+        "name": "Unchecked Input for Loop Condition",
+        "status": "NOT_FOUND",
+        "description": "The product does not properly check inputs that are used for loop conditions, potentially leading to a denial of service or other consequences because of excessive looping.",
+        "storyPoint": 3,
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "id": "CWE-606"
+      },
+      {
+        "severity": "potential",
+        "category": "Code Quality",
+        "name": "Improper Initialization",
+        "status": "NOT_FOUND",
+        "description": "The product does not initialize or incorrectly initializes a resource, which might leave the resource in an unexpected state when it is accessed or used.",
+        "storyPoint": 3,
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "id": "CWE-665"
+      },
+      {
+        "severity": "potential",
+        "category": "Code Quality",
+        "name": "Incorrect Conversion between Numeric Types",
+        "status": "NOT_FOUND",
+        "description": "When converting from one data type to another, such as long to integer, data can be omitted or translated in a way that produces unexpected values. If the resulting values are used in a sensitive context, then dangerous behaviors may occur.",
+        "storyPoint": 3,
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "id": "CWE-681"
+      },
+      {
+        "severity": "potential",
+        "category": "Code Quality",
+        "name": "Incorrect Calculation",
+        "status": "NOT_FOUND",
+        "description": "The product performs a calculation that generates incorrect or unintended results that are later used in security-critical decisions or resource management.",
+        "storyPoint": 5,
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "id": "CWE-682"
+      },
+      {
+        "severity": "potential",
+        "category": "Code Quality",
+        "name": "Missing Release of Resource after Effective Lifetime",
+        "status": "FOUND",
+        "description": "The product does not release a resource after its effective lifetime has ended, i.e., after the resource is no longer needed.",
+        "storyPoint": 3,
+        "evidence": {
+          "files": [
+            "Jackett.Common/Services/UpdateService.cs"
+          ],
+          "explanation": "In UpdateService.ExtractUpdate() (lines 289-296), Stream objects 'inStream' and 'gzipStream' are opened without using 'using' blocks. If tarArchive.ExtractContents() or subsequent operations throw an exception, these streams will not be closed/disposed, resulting in a resource leak."
+        },
+        "id": "CWE-772"
+      },
+      {
+        "severity": "potential",
+        "category": "Code Quality",
+        "name": "Missing Release of File Descriptor or Handle after Effective Lifetime",
+        "status": "FOUND",
+        "description": "The product does not release a file descriptor or handle after its effective lifetime has ended, i.e., after the file descriptor/handle is no longer needed.",
+        "storyPoint": 3,
+        "evidence": {
+          "files": [
+            "Jackett.Common/Services/UpdateService.cs"
+          ],
+          "explanation": "In UpdateService.ExtractUpdate() (lines 289-296), File.OpenRead() returns a stream that is closed with explicit .Close() calls rather than using 'using' blocks. If an exception occurs during extraction, the file handles for 'inStream' and 'gzipStream' will not be released."
+        },
+        "id": "CWE-775"
+      },
+      {
+        "severity": "optional",
+        "category": "Code Quality",
+        "name": "Operator Precedence Logic Error",
+        "status": "NOT_FOUND",
+        "description": "The product uses an expression in which operator precedence causes incorrect logic to be used.",
+        "storyPoint": 1,
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "id": "CWE-783"
+      },
+      {
+        "severity": "potential",
+        "category": "Code Quality",
+        "name": "Memory Allocation with Excessive Size Value",
+        "status": "NOT_FOUND",
+        "description": "The product allocates memory based on an untrusted, large size value, but it does not ensure that the size is within expected limits, allowing arbitrary amounts of memory to be allocated.",
+        "storyPoint": 5,
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "id": "CWE-789"
+      },
+      {
+        "severity": "potential",
+        "category": "Code Quality",
+        "name": "Loop with Unreachable Exit Condition ('Infinite Loop')",
+        "status": "NOT_FOUND",
+        "description": "The product contains an iteration or loop with an exit condition that cannot be reached, i.e., an infinite loop.",
+        "storyPoint": 3,
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "id": "CWE-835"
+      },
+      {
+        "severity": "potential",
+        "category": "Code Quality",
+        "name": "Data Access Operations Outside of Expected Data Manager Component",
+        "status": "NOT_FOUND",
+        "description": "The product uses a dedicated, central data manager component as required by design, but it contains code that performs data-access operations that do not use this data manager.",
+        "storyPoint": 5,
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "id": "CWE-1057"
+      }
+    ],
+    "confidence": "high",
+    "evidence": [
+      "Scanned application source files for code quality patterns"
+    ],
+    "finding": "Assessed 16 CWE rules in Code Quality: 2 FOUND, 14 NOT_FOUND"
+  },
+  "status": "success"
+}
